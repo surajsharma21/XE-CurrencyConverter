@@ -1,0 +1,61 @@
+﻿<process name="XE-CurrencyConverterProcess" version="1.0" bpversion="6.9.0.26970" narrative="Process for the XE Currency Converter" byrefcollection="true" preferredid="7d81dc00-12e5-4cca-96f7-ae5db957e60e">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="2588030e-2309-4813-ba78-85d5a99193cb" name="Start" type="Start">
+    <display x="-60" y="-105" />
+    <onsuccess>b9d106d5-ef33-4e41-a47e-f55bd5f39b3f</onsuccess>
+  </stage>
+  <stage stageid="db4b1558-7f58-4ad9-a2fb-05f21beba91e" name="End" type="End">
+    <display x="30" y="75" />
+  </stage>
+  <stage stageid="e563ea86-d2fd-4749-8dbc-a79f1439e319" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="b9d106d5-ef33-4e41-a47e-f55bd5f39b3f" name="XE-CurrencyConverter::Launch" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="30" y="-105" />
+    <onsuccess>2a80dd82-2017-4926-9f27-a2009c371987</onsuccess>
+    <resource object="XE-CurrencyConverter" action="Launch" />
+  </stage>
+  <stage stageid="2a80dd82-2017-4926-9f27-a2009c371987" name="XE-CurrencyConverter::From" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="120" y="-105" />
+    <onsuccess>9b08757f-2887-4acf-86c0-28021ca16729</onsuccess>
+    <resource object="XE-CurrencyConverter" action="From" />
+  </stage>
+  <stage stageid="9b08757f-2887-4acf-86c0-28021ca16729" name="XE-CurrencyConverter::To" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="120" y="-45" />
+    <onsuccess>3ab6caaf-b08f-49cc-8957-fc7d54417424</onsuccess>
+    <resource object="XE-CurrencyConverter" action="To" />
+  </stage>
+  <stage stageid="3ab6caaf-b08f-49cc-8957-fc7d54417424" name="XE-CurrencyConverter::Amount" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="30" y="-45" />
+    <onsuccess>226f5612-2c60-43fb-8c4b-28fa4193f13f</onsuccess>
+    <resource object="XE-CurrencyConverter" action="Amount" />
+  </stage>
+  <stage stageid="226f5612-2c60-43fb-8c4b-28fa4193f13f" name="XE-CurrencyConverter::GO" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="30" y="15" />
+    <onsuccess>211abd5a-37ac-448e-a60f-5c489a84efba</onsuccess>
+    <resource object="XE-CurrencyConverter" action="GO" />
+  </stage>
+  <stage stageid="211abd5a-37ac-448e-a60f-5c489a84efba" name="XE-CurrencyConverter::Read Data" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="120" y="15" />
+    <onsuccess>cd36c0e7-4707-4dc3-9faa-d6c74a7a1b7d</onsuccess>
+    <resource object="XE-CurrencyConverter" action="Read Data" />
+  </stage>
+  <stage stageid="cd36c0e7-4707-4dc3-9faa-d6c74a7a1b7d" name="XE-CurrencyConverter::Write Data in Excel" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="120" y="75" />
+    <onsuccess>db4b1558-7f58-4ad9-a2fb-05f21beba91e</onsuccess>
+    <resource object="XE-CurrencyConverter" action="Write Data in Excel" />
+  </stage>
+</process>
